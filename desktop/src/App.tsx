@@ -7,7 +7,8 @@ import {
   sendNotification,
 } from "@tauri-apps/plugin-notification";
 
-const BACKEND_URL = "http://localhost:5000";
+const BACKEND_URL =
+  import.meta.env.VITE_BACKEND_URL ?? "http://localhost:5000";
 const DEFAULT_CITY = "Bengaluru";
 const DEFAULT_MONITOR_INTERVAL = 15;
 const NOTIFICATION_THRESHOLD = 0.8;

@@ -4,6 +4,7 @@ const express = require("express");
 const cors = require("cors");
 const axios = require("axios");
 
+
 const {
   shouldNotifyEvent,
 } = require("./services/notificationEngine");
@@ -474,8 +475,6 @@ app.get(
 const PORT =
   process.env.PORT || 5000;
 
-app.listen(PORT, () => {
-  console.log(
-    `WeatherSense backend running on http://localhost:${PORT}`
-  );
+app.listen(PORT, "0.0.0.0", () => {
+  console.log(`WeatherSense backend running on port ${PORT}`);
 });
